@@ -1,0 +1,1 @@
+Keep .exe with "*/icons/" in the same directory. 
