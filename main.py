@@ -517,7 +517,7 @@ def recommend():
         temp = agentsList.pop(0)
         newURL = ''
         tempIndex = 0
-        url = f'https://rib.gg/analytics?agents={getID(temp)}&map=1&patch=23&region=2&tab=comps'
+        url = f'https://rib.gg/analytics/comps/picks?agents={getID(temp)}&map=1&patch=23&region=2&tab=comps&view=picks'
         if len(agentsList) > 0:
             for agent in agentsList:
                 index = url.find('&', tempIndex + 1)
@@ -528,6 +528,7 @@ def recommend():
                                                                                   f'region={getID(region[0])}')
         else:
             newestURL = (url.replace('map=1', f'map={getID(map[0])}')).replace('region=2', f'region={getID(region[0])}')
+
         # Driver chrome options
         options = Options()
         options.headless = True
